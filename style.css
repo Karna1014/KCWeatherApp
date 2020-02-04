@@ -1,0 +1,23 @@
+
+.container {
+        display: flex;
+        flex-direction: row;
+}
+
+#results, #results2 {
+    float: right;
+}
+#search1 {
+    float: right;
+}
+#heading {
+    text-align: center;
+    background-color: blueviolet;
+    color: #ffffff;
+}
+
+#heading {
+    margin-bottom: 5px;
+    width: 100% auto;
+
+}
