@@ -1,7 +1,59 @@
 
-.container {
-        display: flex;
-        flex-direction: row;
+
+    
+
+body {
+    background: url(Assets/Images/Clouds.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+    z-index: -99;
+    width: 100%;
+}
+
+
+#resultQuery {
+        
+        float: right;
+}
+
+h2 {
+    padding-top: 10px;
+    font-size: 3rem;
+}
+
+#tempToday, #humToday, #wsToday, #uvToday {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.City {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.queryHistList {
+    border-bottom: 1px solid grey;
+    float: left;
+    font-size: 16px;
+
+}
+
+#cityToSearch {
+    font-size: 16px;
+}
+
+#search {
+   float: left;
+} 
+
+#searchList {
+    padding-left: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card {
+    min-width: 70px;
 }
 
 #results, #results2 {
@@ -14,10 +66,8 @@
     text-align: center;
     background-color: blueviolet;
     color: #ffffff;
-}
-
-#heading {
     margin-bottom: 5px;
     width: 100% auto;
 
 }
+

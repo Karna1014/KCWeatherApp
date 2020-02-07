@@ -21,52 +21,86 @@
 
 
     </head>
-
+    <body>
         <header>
-            <div class= "container col-md-12" style="text-align: center;" id= "heading">
+            <div class= "container col-md-12" style="height: 75px; text-align: center;" id= "heading">
                   <h2>Weather Dashboard</h2>
             </div>   
         </header>
+        
 
-        <div class="parent-container d-flex">
-            <!-- <div class="container col-md-3" id= "searchInfo"> -->
-                <div class="col-md-3">
-                    <div class="row"> 
-                        <div class="col-md-12">  
-                            <label for="searchBox" class="City"><br>Search for a City:</label> 
-                        </div>
-                        <div class="col-md-10" style= "padding-right: 0px">
-                            <input type="text" class="City"style= "width: 100%;" id="searchBox" placeholder=""></input>
-                        </div>
-                        <div class="col-md-2"; style="padding: 0px; border-radius: .3rem;">
-                                    <button type="button" class= "btn searchBtn btn-md btn-right" id="search1" style="width: 100%; height: 100%; background: blueviolet; padding: 0px !important;"> 
-                                        <i class="fas fa-search"></i> 
-                                    </button> 
-                        </div>
-                    </div> 
-                </div>
-                <div class= "container col-md-3" id= "queryHist">
-                    <ul id= "searchList">
-                    </ul>
-                </div>
-            <!-- </div> -->
-            <div class="container" id= "resultQuery">
-                <div class="col-md-9" >
-                    <div class="col-md-9" id= "resultQuery1">
-                        <h2>City & Today's Result</h2>
-                        <p>Responses</p>
+        <div class="container col-md-3" id="search">
+                    <div class="col col-md-12">  
+                        <label for="searchBox" class="City"><br>Search for a City:</label> 
                     </div>
-                    <div class="col-md-9" id= "resultQuery2">
-                        <h2>5-Day Forecast</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Choose a City" aria-label="City" aria-describedby="basic-addon" id="cityToSearch">
+                        <div class="input-group-append">
+                            <button class="btn btn-md btn-outline-black" id="search1" style= "background: blueviolet;" type="button">
+                            <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                <h4>Search History</h4>
+                <div class= "container col-md-3 mr-0 ml-0" class="padding: 0px;" id= "queryHist">
+                        <ul id="searchList">
+                        
+                        </ul>
+                </div>
+            </div>
+        <div class="container col-md-9"  id= "resultQuery" style="display: none;">
+            <div class="col col-md-9" id= "resultQuery1">
+                <h2><span id="city"></span><span id="dateToday"></span></h2>
+                <p id="tempToday"></p>
+                <p id="humToday"></p>
+                <p id="wsToday"></p>
+                <p id="uvToday"></p>
+            </div>
+            <div class="container col-md-9" style="margin-left: 0px; padding-top: 25px;" id= "resultQuery2">
+                <div class="row">
+                    <h3>5-Day Forecast</h3>
+                </div>
+                <div class= "row">
+                    <div class="col" style="background-color: blue; color: white; margin-right: 10px;">
+                        <h6 class="card-title" id="future1Date" style="white-space: nowrap;"></h6>
+                        <img id="future1Icon" src=""></img>
+                        <p class="card-text" id="future1Temp"></p>
+                        <p class="card-text" id="future1Hum"></p>
+                    </div>
+                    <div class="col" style="background-color: blue; color: white; margin-right: 10px;">
+                        <h6 class="card-title" id="future2Date" style="white-space: nowrap;"></h6>
+                        <img id="future2Icon" src=""></img>
+                        <p class="card-text" id="future2Temp"></p>
+                        <p class="card-text" id="future2Hum"></p>
+                    </div>
+                    <div class="col" style="background-color: blue; color: white; margin-right: 10px;">
+                        <h6 class="card-title" id="future3Date" style="white-space: nowrap;"></h6>
+                        <img id="future3Icon" src=""></img>
+                        <p class="card-text" id="future3Temp"></p>
+                        <p class="card-text" id="future3Hum"></p>
+                    </div>
+                    <div class="col" style="background-color: blue; color: white; margin-right: 10px;">
+                        <h6 class="card-title" id="future4Date" style="white-space: nowrap;"></h6>
+                        <img id="future4Icon" src=""></img>
+                        <p class="card-text" id="future4Temp"></p>
+                        <p class="card-text" id="future4Hum"></p>
+                    </div>
+                    <div class="col" style="background-color: blue; color: white; margin-right: 10px;">
+                        <h6 class="card-title" id="future5Date" style="white-space: nowrap;"></h6>
+                        <img id="future5Icon" src=""></img>
+                        <p class="card-text" id="future5Temp"></p>
+                        <p class="card-text" id="future5Hum"></p>
                     </div>
                 </div>
             </div>
         </div>
+       
                         
                           
     
                      
         <script src= "script.js"></script>
+        
          
     </body>
 
