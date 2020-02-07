@@ -5,7 +5,20 @@ $(document).ready(function(){
     $("#search1").on("click", function() {
         $("#resultsQuery1").empty();
         var cityName = $("#cityToSearch").val().trim();
-         cityName = cityName.charAt(0).toUpperCase() + cityName.substring(1);
+            function uppercase(cityName) {
+            var array1 = cityName.split(' ');
+            var newarray1 = [];
+                
+            for(var x = 0; x < array1.length; x++){
+                newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+            }
+            return newarray1.join(' ');
+            }
+            cityName = uppercase(cityName);
+
+
+
+
         
         var cityStatLon = null;
         var cityStatLat = null;
@@ -27,6 +40,7 @@ $(document).ready(function(){
                 $("#city").text(cityName);
                 $("#dateToday").text(" (" + date + ")");
                 $("#tempToday").text("Temperature: " + genData.main.temp + " " + String.fromCharCode(176) + "F");
+                $("#iconToday").attr("src", "http://openweathermap.org/img/w/" + genData.weather[0]["icon"] + ".png")
                 $("#humToday").text("Humidity: " + genData.main.humidity + "%");
                 $("#wsToday").text("Wind Speed: " + genData.wind.speed + "MPH");
 
@@ -99,3 +113,5 @@ function populateQueryHist(cityName) {
         localStorage.setItem("cityNames", JSON.stringify(cityNames));
     }
 }
+
+    
