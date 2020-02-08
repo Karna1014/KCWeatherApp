@@ -66,7 +66,7 @@ https://karna1014.github.io/KCWeatherApp/.
 
 ### Responsiveness - I-Pad (768px)
 
-![I-Pad](./Assets/Images/I-Pad.png)
+![I-Pad](./Assets/Images/I-Pad-View.png)
 
 
 

@@ -1,25 +1,53 @@
 $(document).ready(function(){
 
+    $("#search1").on("click", function() {
+        var cityName = $("#cityToSearch").val().trim();
+        
+		var cityNameToUse = uppercase(cityName);
+        
+        populateResults(cityNameToUse);
+    });
+});
+
+var cityNames = JSON.parse(localStorage.getItem("cityNames"));
+if(cityNames != null) {
+	cityNames.forEach(function(d) {
+        $("#searchList").append('<li style="cursor: pointer;" onclick="populateResults(\'' + d + '\')" >' + d + '</li>');
+    });
+}
+
+function uppercase(cityName) {
+	var array1 = cityName.split(' ');
+	var newarray1 = [];
+		
+	for(var x = 0; x < array1.length; x++){
+		newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+	}
+	return newarray1.join(' ');
+}
     
 
-    $("#search1").on("click", function() {
-        $("#resultsQuery1").empty();
-        var cityName = $("#cityToSearch").val().trim();
-            function uppercase(cityName) {
-            var array1 = cityName.split(' ');
-            var newarray1 = [];
-                
-            for(var x = 0; x < array1.length; x++){
-                newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
-            }
-            return newarray1.join(' ');
-            }
-            cityName = uppercase(cityName);
+function populateQueryHist(cityName) {
+    var cityNames = [];
+    if (localStorage.getItem("cityNames") === null) {
+        cityNames.push(cityName);
+        localStorage.setItem("cityNames", JSON.stringify(cityNames));
+    } else {
+// checking to make sure no repeat names on list while adding to list
+        cityNames = JSON.parse(localStorage.getItem("cityNames"));
+        if (cityNames.indexOf(cityName) === -1) {
+            cityNames.push(cityName);
+        }
 
+        localStorage.setItem("cityNames", JSON.stringify(cityNames));
+    }
+}
 
+function populateResults(cityName) {
+    $("#resultsQuery1").empty();
+    console.log(cityName);
 
-
-        
+           
         var cityStatLon = null;
         var cityStatLat = null;
 
@@ -87,31 +115,13 @@ $(document).ready(function(){
         });
         
 //Search History List                             
-        populateQueryHist(cityName);
-        
-    });
-});
-    var cityNames = JSON.parse(localStorage.getItem("cityNames"));
-        if (cityNames != null) {
-                cityNames.forEach(function(d) {
-                $("#searchList").append('<li>' + d + '</li>');
-                });
-        } 
+        //Search History List                             
+    populateQueryHist(cityName);
+    console.log(cityName);
+}
+    
     
 
-function populateQueryHist(cityName) {
-    var cityNames = [];
-    if (localStorage.getItem("cityNames") === null) {
-        cityNames.push(cityName);
-        localStorage.setItem("cityNames", JSON.stringify(cityNames));
-    } else {
-        cityNames = JSON.parse(localStorage.getItem("cityNames"));
-        if (cityNames.indexOf(cityName) === -1) {
-            cityNames.push(cityName);
-        }
 
-        localStorage.setItem("cityNames", JSON.stringify(cityNames));
-    }
-}
 
     
