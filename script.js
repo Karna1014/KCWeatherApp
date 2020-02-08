@@ -108,16 +108,18 @@ function populateResults(cityName) {
                         currentDateToUse = dateToUse;
                         count += 1;
                     }
+                    //Search History List                             
+                populateQueryHist(cityName);
+                console.log(cityName);
                 }
 //Show all weather info when requested
                 $("#resultQuery").css("display", "block");
+                 
             }
         });
         
-//Search History List                             
-        //Search History List                             
-    populateQueryHist(cityName);
-    console.log(cityName);
+                             
+       
 }
     
     
