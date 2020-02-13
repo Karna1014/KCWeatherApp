@@ -36,7 +36,7 @@ Weather dashboards such as this are important to our daily lives.  They provide 
 
 1. Index.html
     
-    Main Page - Day Planner
+    Main Page - 
 
 2. Script.js    
     
