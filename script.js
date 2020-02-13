@@ -9,6 +9,64 @@ $(document).ready(function(){
     });
 });
 
+var userString = "cityName"
+
+// if (userString.includes(" ")) {
+//   var firstWord = userString.split(" ")[0]
+  
+//   switch (firstWord) {
+//     case "st.":
+//         var newString = userString.replace("st.", "saint")
+//         userString = newString    
+//         break;
+//     case "ft.":
+//         var newString = userString.replace("ft.", "fort")
+//         userString = newString  
+//         break;
+//     case "st":
+//         var newString = userString.replace("st", "saint")
+//         userString = newString    
+//         break;
+//     case "ft":
+//         var newString = userString.replace("ft", "fort")
+//         userString = newString  
+//         break;
+//     case "ST.":
+//         var newString = userString.replace("ST.", "saint")
+//         userString = newString    
+//         break;
+//     case "FT.":
+//         var newString = userString.replace("FT.", "fort")
+//         userString = newString  
+//         break;
+//     case "ST":
+//         var newString = userString.replace("ST", "saint")
+//         userString = newString    
+//         break;
+//     case "FT":
+//         var newString = userString.replace("FT", "fort")
+//         userString = newString  
+//         break;
+//     case "St.":
+//         var newString = userString.replace("St.", "saint")
+//         userString = newString    
+//         break;
+//     case "Ft.":
+//         var newString = userString.replace("Ft.", "fort")
+//         userString = newString  
+//         break;
+//     case "St":
+//         var newString = userString.replace("St", "saint")
+//         userString = newString    
+//         break;
+//     case "Ft":
+//         var newString = userString.replace("Ft", "fort")
+//         userString = newString  
+//         break;
+//   }
+  
+// }
+
 var cityNames = JSON.parse(localStorage.getItem("cityNames"));
 if(cityNames != null) {
 	cityNames.forEach(function(d) {
@@ -25,7 +83,7 @@ function uppercase(cityName) {
 	}
 	return newarray1.join(' ');
 }
-    
+
 
 function populateQueryHist(cityName) {
     var cityNames = [];

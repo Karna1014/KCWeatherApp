@@ -3,7 +3,7 @@
     
 
 body {
-    background: url(Assets/Images/Clouds.jpg);
+    background-image: url(Assets/Images/Clouds.jpg);
     background-size: cover;
     -moz-background-size: cover;
     z-index: -99;

@@ -9,9 +9,12 @@ A weather application that allows the user search by city for current weather in
 2. Ajax calls used to hook into API to retrieve data in a JSON format
 3. Initial Search displays the following for current day:
 
-    * City                  * Humidity
-    * Date                  * Wind Speed
-    * Temp                  * UV Index  
+    * City                  
+    * Humidity
+    * Date                  
+    * Wind Speed
+    * Temp                  
+    * UV Index  
     * Weather Icon Img
     
 4. "Search" results will save in localStorage.
