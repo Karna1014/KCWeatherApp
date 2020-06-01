@@ -1,7 +1,7 @@
 # KCWeatherApp
 Weather condition search dashboard 
 
-**`Description:`**
+`**Description:**`
 
 A weather application that allows the user search by city for current weather information for that day as well as the next five days.  App utilizes an (**API**)Application Programming Interface to pull data into the browser and features dynamically updated HTML and CSS powered by jQuery.  The following conditions were met:
 
@@ -27,7 +27,7 @@ A weather application that allows the user search by city for current weather in
     * Humidity
 
 
-**`Usage:`**
+`**Usage:**`
 
 Weather dashboards such as this are important to our daily lives.  They provide valuable information that allows us to plan appropriately for inclement weather.  Weather affects how and when we travel, what clothes we where, what activities we do in our free time.  Companies that deal with logistics rely on this information to appropriately plan business travel and adjust for impending delays.  Often, being ill-prepared can be very costly as shipments can be delayed, deliveries rerouted, etc. Being aware can give you an edge and in many cases save the day!
 
