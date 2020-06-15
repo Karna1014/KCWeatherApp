@@ -50,7 +50,10 @@ Weather dashboards such as this are important to our daily lives.  They provide 
 
     Compressed set of CSS rules that resets the styling of all HTML elements to a consistent baseline.
 
+**Technologies Used:**
 
+    * HTML, JavaScript, jQuery
+    * OpenWeatherAPI, Bootstrap4
 
 ### Link to site
 
